@@ -1,0 +1,214 @@
+body {
+    background-color: white;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    height: 21rem;
+    background-color: var(--segundary-color);
+}
+#page-results-search {
+    width: 90%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+#page-results-search header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-results-search header a {
+    display: flex;
+    color: var(--title-color);
+    font-weight: bold;
+    align-items: center;
+}
+
+#page-results-search header a span {
+    display: flex;
+    background-image: url('/icones/arrow-left.svg');
+    width: 20px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+#page-results-search form {
+    background-color: white;
+    padding: 64px;
+    border-radius: 8px;
+    max-width: 720px;
+    margin: 80px auto; 
+}
+
+
+#page-results-search h1 {
+    font-size: 36px;
+}
+
+#page-results-search form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+#page-results-search form legend {
+    margin-bottom: 40px;
+}
+
+#page-results-search form legend h2 {
+    font-size: 24px;
+}
+
+#page-results-search form fieldset .field {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+#page-results-search form fieldset .field-group {
+    display: flex;
+}
+
+#page-results-search form fieldset input, #page-results-search form fieldset select {
+    background-color: var(--segundary-color);
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;   
+    outline-color: var(--title-color);
+    border-radius: 8px;
+}
+
+#page-results-search form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#page-results-search form .field label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#page-results-search form fieldset .field + .field {
+    margin-left: 24px;
+}
+
+#page-results-search form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;   
+    color: white;
+    cursor: pointer;
+    transition: background-color 400ms;
+}
+
+#page-results-search form button:hover{
+    background-color: #2fb86e;
+}
+
+#page-results-search form fieldset .items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+#page-results-search form fieldset .items-grid li{
+    background-color: var(--segundary-color);
+    list-style: none;
+    border: 2px solid var(--segundary-color);
+    height: 180px;
+    border-radius: 8px;
+    padding: 32px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+
+#page-results-search form fieldset .items-grid li span{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    color: var(--title-color);
+    margin-top: 12px;
+}
+
+#page-results-search form fieldset .items-grid .selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+#page-results-search form fieldset .items-grid li span, 
+#page-results-search form fieldset .items-grid li img {
+    
+    /* this propriety don`t get events points*/
+    pointer-events: none;
+} 
+
+
+main {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+main h4 {
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+
+main .cards {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+}
+
+main .card img{
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+main .card h5 {
+    margin: 32px 0px 24px ;
+    font-size: 36px;
+    line-height: 41px;
+    color: #322153;
+}
+
+main .card h6 {
+    margin-bottom: 24px;
+    color: var(--primary-color);   
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Roboto;
+    line-height: 34px;
+}
+
+main .card p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #6c6c80;
+}
+
+
+

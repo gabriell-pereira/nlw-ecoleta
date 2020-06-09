@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--IDENTIFICA PARA O NAVEGADOR QUE É UM ARQUIVO HTML-->
+
+<html lang="pt-br">
+    <!--TAG HTML-->
+    <head>
+
+        <meta charset="UTF-08"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block title %}
+            <title>Ecoleta | Coleta de Resíduos
+            </title>
+        {% endblock title %}
+
+        {% include "partials/common-style.html" %}
+        {% block styles %}{% endblock styles %}
+        <link rel="stylesheet" href="/styles/responsive.css">
+
+    </head>
+    <body>
+
+        <div id="{{ pageId }}">
+            {% block content %}{% endblock content %}
+        </div>
+
+        {% block modal %}{% endblock modal %}
+
+        {% block scripts %}{% endblock scripts %}
+    </body>
+</html>

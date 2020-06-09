@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-results-search" %}
+
+<title>Pontos de Coleta</title>
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/search-results.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    <main>
+        {% if total > 0 %}
+            <h4>
+                <strong>
+                    {{ total }}
+                    resultados</strong>
+                encontrados
+            </h4>
+            <div class="cards">
+                {% for place in places %}
+                    <div class="card">
+                        <img src="{{ place.image }}" alt="{{ place.name }}">
+                        <h5>{{ place.name }}</h5>
+                        <h6>{{ place.items }}</h6>
+                        <p>
+                            {{ place.city }},
+                            {{ place.state }}
+                            <br/>
+                            {{ place.address }}
+                            <br/>
+                            {{ place.address2 }}
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <h4>
+                <strong>Nenhum</strong> item encontrado
+            </h4>
+        {% endif %}
+    </main>
+{% endblock content %}
